@@ -1,0 +1,36 @@
+[user]
+    name = Herbert Lie
+    email = herbert@eventbrite.com
+[alias]
+    st = status
+    co = checkout
+    br = branch
+
+[gc]
+    auto = 1
+[color]
+    ui = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = white
+[color "diff"]
+    meta = green bold
+    frag = cyan bold
+    old = red
+    new = green
+[color "status"]
+    added = cyan
+    changed = cyan
+    untracked = green
+[core]
+	excludesfile = /Users/herbert/.gitignore_global
+	editor = /usr/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[init]
+	templatedir = ~/.git_template
