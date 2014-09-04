@@ -1,30 +1,35 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
 " Let Vundle manage Vundle, required
 " Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-filetype plugin indent on     " required for vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-Plugin 'gmarik/vundle'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Bundle 'bling/vim-airline'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'rking/ag.vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'dyng/ctrlsf.vim'
-Bundle 'tpope/vim-commentary'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'nvie/vim-flake8'
+Plugin 'bling/vim-airline'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'rking/ag.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'dyng/ctrlsf.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'nvie/vim-flake8'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
-
-" Activates filetype detection
-filetype plugin indent on
 
 " Activates syntax highlighting among other things
 syntax on
