@@ -15,14 +15,16 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'rking/ag.vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'dyng/ctrlsf.vim'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-commentary'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'nvie/vim-flake8'
+Plugin 'wesQ3/vim-windowswap'
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,8 +60,8 @@ nnoremap <leader>p :CtrlPCurWD<CR>
 nnoremap <leader>t :Tagbar<CR>
 
 " Leader f for CtrlSf
-nnoremap <leader>f :CtrlSF -i 
-nnoremap <leader>ipd oimport ipdb; ipdb.set_trace()
+nnoremap <leader>f :CtrlSF -ignorecase 
+nnoremap <leader>ipd oimport ipdb; ipdb.set_trace() 
 
 " CtrlSF Config
 let g:ctrlsf_auto_close = 0
@@ -87,14 +89,14 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "Disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+" map <up> <nop>
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
+" imap <up> <nop>
+" imap <down> <nop>
+" imap <left> <nop>
+" imap <right> <nop>
 
 " So that clipboard from vim can be shared with Mac Wide clipboard
 set clipboard=unnamed
@@ -131,3 +133,13 @@ set number
 " Color scheme
 set t_Co=256
 colorscheme hybrid
+" colorscheme base16-eighties
+" set background=dark
+" colorscheme solarized
+
+" Relative numbering
+set rnu
+
+" Phabricator autocomplete
+set dictionary+=~/.evbdevtools/phabricator_users.txt
+set dictionary+=~/.evbdevtools/phabricator_groups.txt
